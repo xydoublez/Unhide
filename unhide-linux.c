@@ -112,7 +112,9 @@ void get_max_pid(int* newmaxpid)
    {
       *newmaxpid = tmppid;
    }
-   fclose(fd) ;
+   if (fd) {
+       fclose(fd);
+   }
 }
 
 /*
